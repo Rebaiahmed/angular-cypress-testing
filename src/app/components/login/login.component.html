@@ -1,0 +1,55 @@
+<h1 class="display-5"> Log in</h1>
+<hr />
+
+<div class="row">
+  <div class="col-md-6 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <form
+          novalidate
+        >
+          <div class="mb-3">
+            <label for="name" class="form-label">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              required
+              #userEmail
+            />
+            <span
+              class="text-danger"
+              *ngIf="userEmail.errors?.['required']"
+            >
+              Email is required
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="name"
+              required
+              #userPassword
+            />
+             <span
+              class="text-danger"
+              *ngIf="userPassword.errors?.['required']"
+            >
+              Password is required
+            </span>
+          </div>
+
+          <div class="formGroup">
+            <button type="button" class="btn btn-primary me-2"  (click)="authService.SignIn(userEmail.value, userPassword.value)" >
+              Sign in
+              </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
