@@ -12,26 +12,18 @@
 
         <img class="user-avatar" src="{{ appUser.photoURL }}" />
         <li class="nav-item">
-          <a class="nav-link active" (click)="userLogout()">Logout</a>
+          <a class="nav-link active" data-cy="logout-link" (click)="userLogout()">Logout</a>
         </li>
       </ul>
     </ng-container>
     <ng-template #login>
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" [routerLink]="['/login']">Login</a>
+        <li class="nav-item" data-cy="login-button">
+          <a class="nav-link active"  [routerLink]="['/login']">Login</a>
         </li>
       </ul>
     </ng-template>
     <ul class="navbar-nav mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a
-          class="nav-link active"
-          href="https://github.com/AnkitSharma-007/angular-firebase-crud"
-          target="_blank"
-          >GitHub</a
-        >
-      </li>
     </ul>
   </div>
 </nav>

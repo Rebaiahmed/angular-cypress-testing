@@ -16,6 +16,7 @@
               name="name"
               required
               #userEmail
+              data-cy="login-email-input"
             />
             <span
               class="text-danger"
@@ -33,6 +34,7 @@
               name="name"
               required
               #userPassword
+              data-cy="login-password-input"
             />
              <span
               class="text-danger"
@@ -43,7 +45,7 @@
           </div>
 
           <div class="formGroup">
-            <button type="button" class="btn btn-primary me-2"  (click)="authService.SignIn(userEmail.value, userPassword.value)" >
+            <button type="button"   data-cy="login-button" class="btn btn-primary me-2"  (click)="authService.SignIn(userEmail.value, userPassword.value)" >
               Sign in
               </button>
           </div>
